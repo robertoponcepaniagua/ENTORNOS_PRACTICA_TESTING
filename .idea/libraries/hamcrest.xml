@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="hamcrest">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/practica-testing/lib/hamcrest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/practica-testing/lib/jacocoagent.jar!/" />
+      <root url="jar://$PROJECT_DIR$/practica-testing/lib/jacococli.jar!/" />
+      <root url="jar://$PROJECT_DIR$/practica-testing/lib/junit.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

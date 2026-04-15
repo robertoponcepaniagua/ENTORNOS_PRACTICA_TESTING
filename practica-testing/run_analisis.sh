@@ -7,7 +7,7 @@ echo "☕ 2. Compilando código fuente y tests..."
 javac -d bin -cp lib/junit.jar src/main/*.java src/tests/*.java
 
 echo "🧪 3. Ejecutando Pruebas Unitarias con JaCoCo..."
-java -javaagent:lib/jacocoagent.jar=destfile=reportes/jacoco.exec -cp bin:lib/junit.jar:lib/hamcrest.jar org.junit.runner.JUnitCore CuentaBancariaTest
+java -javaagent:lib/jacocoagent.jar=destfile=reportes/jacoco.exec -cp bin:lib/junit.jar:lib/hamcrest.jar org.junit.runner.JUnitCore tests.CuentaBancariaTest
 
 echo "📊 4. Generando reporte XML de cobertura..."
 java -jar lib/jacococli.jar report reportes/jacoco.exec --classfiles bin --sourcefiles src/main --xml reportes/jacoco.xml
