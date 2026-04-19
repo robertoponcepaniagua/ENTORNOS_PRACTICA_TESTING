@@ -16,6 +16,7 @@ echo "🚀 5. Escaneando código y enviando a SonarQube..."
 docker run --rm \
     --network host \
     -e SONAR_HOST_URL="http://localhost:9000/" \
+    -e SONAR_TOKEN="squ_dd65ffeca88650ada1347330c94895326a602beb" \
     -v "$(pwd):/usr/src" \
     sonarsource/sonar-scanner-cli
 

@@ -13,31 +13,20 @@ public class CuentaBancaria {
         return titular;
     }
 
-    public void setTitular(String titular) {
-        this.titular = titular;
-    }
-
     public double getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
-
     public void depositar(double cantidad) {
         if (cantidad <= 0) {
-            throw new IllegalArgumentException("La cantidad no puede ser 0 ni negativa");
+            throw new IllegalArgumentException("La cantidad a depositar debe ser mayor que cero.");
         }
-        if (cantidad > saldo) {
-            throw new IllegalArgumentException("Fondos insuficientes");
-        }
-        setSaldo(getSaldo() - cantidad);
+        saldo += cantidad;  // SUMA, no resta
     }
 
     public void retirar(double cantidad) {
         if (cantidad <= 0) {
-            throw new IllegalArgumentException("La cantidad a retirar debe ser positiva");
+            throw new IllegalArgumentException("La cantidad a retirar debe ser mayor que cero.");
         }
         if (cantidad > saldo) {
             throw new IllegalArgumentException("Fondos insuficientes.");
