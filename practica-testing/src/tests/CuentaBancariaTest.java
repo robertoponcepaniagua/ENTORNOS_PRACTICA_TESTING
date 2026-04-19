@@ -16,6 +16,12 @@ public class CuentaBancariaTest {
         cuenta = new CuentaBancaria("Roberto Ponce Paniagua", 1000.0);
     }
 
+    // Test comprobación: verificar que el titular se asigna correctamente
+    @Test
+    public void testGetTitularCorrecto() {
+        assertEquals("Roberto Ponce Paniagua", cuenta.getTitular());
+    }
+
     // Si ingreso 500€, el saldo debe pasar de 1000 a 1500
     @Test
     public void testDepositoValidoIncrementaSaldo() {
